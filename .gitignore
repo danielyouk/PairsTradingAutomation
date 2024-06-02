@@ -1,0 +1,5 @@
+# do not git for all the log file (*.log)
+*.log
+*.pyc
+*.DS_Store
+
