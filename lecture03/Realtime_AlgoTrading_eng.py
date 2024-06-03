@@ -174,3 +174,5 @@ while (datetime.datetime.now().weekday() in [0, 1, 2, 3, 4]):
                                                         margin_ratio = 0.25)
     ib_order_execute(df_current_future_positions = df_current_future_positions, df_trading_time = df_trading_time)
     ib.sleep(60)
+    if now.hour > 16:
+        break
