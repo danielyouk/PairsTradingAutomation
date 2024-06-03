@@ -12,7 +12,7 @@ This repository is a companion for the lecture on Pairs Trading Automation in Az
 The course is composed of three main sections:
 - **Lecture Part 1**: Pairs Trading Portfolio Creation 
 - **Lecture Part 2**: Real-Time Trading with Interactive Brokers API (IBKR TWS API: Trading Workstation) 
-- **Lecture Part 3**: IBController and Azure Runbook to Automate Streamlined Trading 
+- **Lecture Part 3**: IBController and Automate Streamlined Trading 
 
 ## Environment Setup with Conda
 
