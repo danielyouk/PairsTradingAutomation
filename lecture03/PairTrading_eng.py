@@ -338,11 +338,11 @@ class PairTradingUpdatePosition(PairTradingIntraDay):
             None
         """
         if self.signal == 1:
-            self.stock1_future_numbers = math.floor((0.5 * self.buying_power) / self.df_signal_summary.iloc[-1]['stock1_start_price'])
-            self.stock2_future_numbers = -math.floor((0.5 * self.buying_power) / self.df_signal_summary.iloc[-1]['stock2_start_price'])
+            self.stock1_future_numbers = math.floor((0.5 * self.buying_power) / self.df_signal_summary.iloc[-1]['stock1_last_price'])
+            self.stock2_future_numbers = -math.floor((0.5 * self.buying_power) / self.df_signal_summary.iloc[-1]['stock2_last_price'])
         elif self.signal == -1:
-            self.stock1_future_numbers = -math.floor((0.5 * self.buying_power) / self.df_signal_summary.iloc[-1]['stock1_start_price'])
-            self.stock2_future_numbers = math.floor((0.5 * self.buying_power) / self.df_signal_summary.iloc[-1]['stock2_start_price'])
+            self.stock1_future_numbers = -math.floor((0.5 * self.buying_power) / self.df_signal_summary.iloc[-1]['stock1_last_price'])
+            self.stock2_future_numbers = math.floor((0.5 * self.buying_power) / self.df_signal_summary.iloc[-1]['stock2_last_price'])
         else:
             self.stock1_future_numbers = 0
             self.stock2_future_numbers = 0
