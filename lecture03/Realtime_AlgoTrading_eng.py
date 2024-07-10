@@ -32,7 +32,7 @@ else:
     
 time_diff = datetime.datetime.now() - last_pairs_update
 
-if time_diff >= datetime.timedelta(days=7): 
+if time_diff >= datetime.timedelta(days=1.5): 
     os.system('kaggle kernels output dtmanager1979/stock-trading-eda-scheduled -p /Users/songyouk/PairsTradingAutomation/')
     last_pairs_update = datetime.datetime.now()
     with open('/Users/songyouk/PairsTradingAutomation/data/last_pairs_update.txt', 'w') as f:
@@ -40,7 +40,7 @@ if time_diff >= datetime.timedelta(days=7):
         logging.info('create last_pairs_update.txt') 
 
 
-df_sel= pd.read_pickle("'/Users/songyouk/PairsTradingAutomation/data/df_sel.pkl")[["median_window", "median_zscore_threshold"]]
+df_sel= pd.read_pickle("/Users/songyouk/PairsTradingAutomation/data/df_sel.pkl")[["median_window", "median_zscore_threshold"]]
 stocks = [stock for pair in df_sel.index for stock in pair]
 
 
@@ -162,7 +162,7 @@ def ib_order_execute(df_current_future_positions, df_trading_time):
 
 import pandas_market_calendars as mcal
 
-while (datetime.datetime.now().weekday() in [0, 1, 2, 3, 4]):
+while True:
     now = datetime.datetime.now(pytz.timezone('America/New_York'))
     schedule = mcal.get_calendar('NYSE').schedule(start_date=now, end_date=now)
     if len(schedule) == 0 or now.hour > 16:

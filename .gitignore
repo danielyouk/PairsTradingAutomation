@@ -3,3 +3,15 @@
 *.pyc
 *.DS_Store
 /data
+*.docx
+*.xlsx
+*.pdf
+*.pptx
+*.doc
+*.xls
+*.ppt
+*.zip
+*.rar
+*.tar
+*.txt
+*.csv
