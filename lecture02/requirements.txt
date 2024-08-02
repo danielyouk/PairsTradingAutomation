@@ -1,0 +1,2 @@
+yfinance==0.2.36
+ib-insync==0.9.86

@@ -1,0 +1,22 @@
+name: myenv-finance
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - seaborn
+  - matplotlib
+  - plotly
+  - requests
+  - beautifulsoup4
+  - ipywidgets
+  - joblib
+  - pytz
+  - ipykernel
+  - jupyterlab
+  - jupyter
+  - pip
+  - pip:
+    - -r requirements.txt
